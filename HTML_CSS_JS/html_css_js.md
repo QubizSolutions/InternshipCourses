@@ -87,7 +87,7 @@ The HTML class attribute makes it possible to define equal styles for elements w
 </html>
 ```
 
-## <a name="1-css"></a>2.CSS
+## <a name="2-css"></a>2.CSS
 
 [CssStructure]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/css_structure.PNG "CSS structure"
 [CssBoxModel]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/css_box_model.PNG "CSS Box Model"
@@ -99,7 +99,7 @@ The HTML class attribute makes it possible to define equal styles for elements w
 * CSS saves a lot of work. It can control the layout of multiple web pages all at once
 * External stylesheets are stored in CSS files
 
-[CssStructure]
+![alt text][CssStructure]
 
 ### **External Style Sheet**
 
@@ -161,7 +161,7 @@ The example below shows how to change the color and the left margin of a ```<h1>
 All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
 The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
 
-[CssBoxModel]
+![alt text][CssBoxModel]
 
 * **Content** - The content of the box, where text and images appear
 * **Padding** - Clears an area around the content. The padding is transparent
@@ -182,7 +182,7 @@ The box model allows us to add a border around elements, and to define space bet
 
 5. **type:** Element type selectors and pseudo-elements, like :first-letter or :after have the lowest value in terms of specificity with 0-0-1 per element.
 
-## <a name="1-javascript"></a>3.JavaScript
+## <a name="3-javascript"></a>3.JavaScript
 
 [ArithmeticOperators]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/js_arithmetic_operators.PNG "Arithmetic operators"
 [LogicalOperators]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/js_logical_operators.PNG "Comparison and Logical Operators"
@@ -202,11 +202,11 @@ JavaScript can be used for:
 
 ### **Arithmetic operators:**
 
-[ArithmeticOperators]
+![alt text][ArithmeticOperators]
 
 ### **Comparison and Logical Operators:**
 
-[LogicalOperators]
+![alt text][LogicalOperators]
 
 ### **JavaScript variables:**
 
@@ -335,7 +335,7 @@ To reference an external .js file, we use the ```<script>``` tag, like in the se
 
 * An error occurrence stops the code execution, after the error’s line.
 
-## <a name="1-tips"></a>4.Tips
+## <a name="4-tips"></a>4.Tips
 
 1. Do not use code in the HTML page, always put it in external files.
 
