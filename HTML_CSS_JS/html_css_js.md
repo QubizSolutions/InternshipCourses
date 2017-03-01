@@ -1,12 +1,12 @@
 # Introduction to HTML, CSS and JavaScript
 
-[1. HTML](https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/html_css_js.md#1-html)
+[1. HTML](#1-html)
 
-[2. CSS](https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/html_css_js.md#2-css)
+[2. CSS](#2-css)
 
-[3. JavaScript](https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/html_css_js.md#3-javascript)
+[3. JavaScript](#3-javascript)
 
-[4. Tips](https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/html_css_js.md#4-tips)
+[4. Tips](#4-tips)
 
 **Why Study HTML/CSS/JavaScript?**
 
@@ -15,8 +15,8 @@ There are 3 languages, all web developers/ testers must learn:
    2. CSS to specify the layout of web pages
    3. JavaScript to program the behavior of web pages
 
-1.HTML
----------
+## <a name="1-html"></a>1.HTML
+
 Basic structure: 
 
 ```html
@@ -87,10 +87,10 @@ The HTML class attribute makes it possible to define equal styles for elements w
 </html>
 ```
 
-2.CSS
------
-[CssStructure]: https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/Content/Img/css_structure.PNG "CSS structure"
-[CssBoxModel]: https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/Content/Img/css_box_model.PNG "CSS Box Model"
+## <a name="1-css"></a>2.CSS
+
+[CssStructure]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/css_structure.PNG "CSS structure"
+[CssBoxModel]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/css_box_model.PNG "CSS Box Model"
 
 ### **What is CSS?**
 
@@ -99,7 +99,7 @@ The HTML class attribute makes it possible to define equal styles for elements w
 * CSS saves a lot of work. It can control the layout of multiple web pages all at once
 * External stylesheets are stored in CSS files
 
-![alt text][CssStructure]
+[CssStructure]
 
 ### **External Style Sheet**
 
@@ -161,7 +161,7 @@ The example below shows how to change the color and the left margin of a ```<h1>
 All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
 The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
 
-![alt text][CssBoxModel]
+[CssBoxModel]
 
 * **Content** - The content of the box, where text and images appear
 * **Padding** - Clears an area around the content. The padding is transparent
@@ -182,10 +182,10 @@ The box model allows us to add a border around elements, and to define space bet
 
 5. **type:** Element type selectors and pseudo-elements, like :first-letter or :after have the lowest value in terms of specificity with 0-0-1 per element.
 
-3.JavaScript
---------------
-[ArithmeticOperators]: https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/Content/Img/js_arithmetic_operators.PNG "Arithmetic operators"
-[LogicalOperators]: https://github.com/QubizSolutions/InternshipCourses/HTML_CSS_JS/Content/Img/js_logical_operators.PNG "Comparison and Logical Operators"
+## <a name="1-javascript"></a>3.JavaScript
+
+[ArithmeticOperators]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/js_arithmetic_operators.PNG "Arithmetic operators"
+[LogicalOperators]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/js_logical_operators.PNG "Comparison and Logical Operators"
 
 **JavaScript is a high-level, dynamic, untyped, and interpreted programming language**
 
@@ -202,11 +202,11 @@ JavaScript can be used for:
 
 ### **Arithmetic operators:**
 
-![alt text][ArithmeticOperators]
+[ArithmeticOperators]
 
 ### **Comparison and Logical Operators:**
 
-![alt text][LogicalOperators]
+[LogicalOperators]
 
 ### **JavaScript variables:**
 
@@ -335,8 +335,8 @@ To reference an external .js file, we use the ```<script>``` tag, like in the se
 
 * An error occurrence stops the code execution, after the error’s line.
 
-4.Tips
-------
+## <a name="1-tips"></a>4.Tips
+
 1. Do not use code in the HTML page, always put it in external files.
 
 2. Reference your external files as lower on the page as possible – so they are downloaded after the page content has loaded.
