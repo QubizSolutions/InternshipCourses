@@ -46,7 +46,7 @@ export class AppComponent { name = 'Angular'; }
 
  ## <a name="high-level-overview"></a>1. High level overview
 
- [HighLevelArchitecture]: https://github.com/QubizSolutions/InternshipCourses/blob/master/Angular2/Content/high_level_architecture.png.PNG "Angular 2 high level architecture"
+ [HighLevelArchitecture]: https://github.com/QubizSolutions/InternshipCourses/blob/master/Angular2/Content/high_level_architecture.png "Angular 2 high level architecture"
 
 ![alt text][HighLevelArchitecture]
 
@@ -146,7 +146,7 @@ A component is a class with the ```@Component``` decorator. The main properties 
 * **styleUrls** - list of urls to stylesheets to be applied to this component's view
 
 ### **Data binding**
-[DataBinding]: https://github.com/QubizSolutions/InternshipCourses/blob/master/Angular2/Content/data_binding.PNG "Data binding"
+[DataBinding]: https://github.com/QubizSolutions/InternshipCourses/blob/master/Angular2/Content/data_binding.png "Data binding"
 
 
 Data binding is the synchronization of data between the model and view components
@@ -164,7 +164,7 @@ There are four forms of data binding:
 
 ### **Lifecycle Hooks**
 
-[LifecycleHooks]: https://github.com/QubizSolutions/InternshipCourses/blob/master/Angular2/Content/lifecycle-hooks.PNG "Lifecycle Hooks"
+[LifecycleHooks]: https://github.com/QubizSolutions/InternshipCourses/blob/master/Angular2/Content/lifecycle-hooks.png "Lifecycle Hooks"
 
 Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them
 
