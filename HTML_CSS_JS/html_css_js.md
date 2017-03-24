@@ -187,9 +187,14 @@ The box model allows us to add a border around elements, and to define space bet
 [ArithmeticOperators]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/js_arithmetic_operators.PNG "Arithmetic operators"
 [LogicalOperators]: https://github.com/QubizSolutions/InternshipCourses/blob/master/HTML_CSS_JS/Content/Img/js_logical_operators.PNG "Comparison and Logical Operators"
 
-**JavaScript is a high-level, dynamic, untyped, and interpreted programming language**
 
-**JavaScript is an object oriented programming language, used for adding functionality to a web-page**
+**Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production; the majority of websites employ it, and all modern Web browsers support it without the need for plug-ins.**
+
+**JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting object-oriented,[9] imperative, and functional programming styles.**
+
+**JavaScript supports various ways to test the type of an object, including duck typing.**
+
+> If it walks like a duck and it quacks like a duck, then it is a duck.
 
 JavaScript can be used for:
  
