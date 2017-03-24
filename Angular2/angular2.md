@@ -38,9 +38,9 @@ export class AppComponent { name = 'Angular'; }
 
  [4. Directives](#directives)
 
- [5. Services](#services)
+ [5. Routing](#routing)
 
- [6. Routing](#routing)
+ [6. Services](#services)
 
  [7. References](#references)
 
@@ -289,7 +289,119 @@ export class HighlightDirective {
 ```@Directive``` requires a selector to identify the HTML in the template that is associated with the directive. The selector for an attribute is the attribute name in square brackets. Here, the directive's selector is ```[myHighlight]```. 
 Angular locates all elements in the template that have an attribute named ```myHighlight```
 
- ## <a name="services"></a>5. Services
+ ## <a name="routing"></a>5. Routing
+
+The Angular Router enables navigation from one view to the next as users perform application tasks.
+
+Routing is used to separate different parts of an application, generally by using the URL to denote the location
+
+Most routing applications should add a ```<base>``` element to the **index.html** as the first child in the ```<head>``` tag to tell the router how to compose navigation urls
+
+```HTML
+<base href="/">
+```
+
+A routed Angular app has one singleton **Router** service
+When the URL in the browser changes, the router looks for the correspinging **Route** from which it can find the componet to display
+
+Route definition
+
+```TYPESCRIPT
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { HomeComponent } from './home.component';
+import { PeopleComponent } from './people.component';
+import { PersonComponent } from './person.component';
+
+const appRoutes: Routes = [
+    {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full',
+    },
+    {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
+        path: 'people',
+        component: PeopleComponent
+    },
+    {
+        path: 'person/:id',
+        component: PersonComponent
+    }
+];
+
+export const Routing: ModuleWithProviders = RouterModule.forRoot(appRoutes, { useHash: true });
+```
+
+Given the configuration, when the browser URL for this application becomes /home, the router matches that URL to the route path /home and displays the HomeComponent after a **RouterOutlet** that is placed in the host view's HTML.
+
+```HTML
+<router-outlet></router-outlet>
+```
+
+The navigation to a specific view can be done by typing the URL into the browser's address bar, or by using **router links**
+
+```HTML
+<h1>Angular Router</h1>
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['link-active']">Home</a>
+    <a [routerLink]="['/people']" [routerLinkActive]="['link-active']">People</a>
+    <a [routerLink]="['/person', {id: selectedPerson.id}]" [routerLinkActive]="['link-active']">Person</a>
+  </nav>
+  <router-outlet></router-outlet>
+```
+
+Navigation can also be done from typescript trough the **Router**
+
+```TYPESCRIPT
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+    ...
+})
+export class HomeComponent {
+    ...
+
+     constructor(private router: Router) { }
+
+    goToPerson(id: number) {
+        this.router.navigate(['/person', id]);
+    }
+
+    goToDashboard() {
+        this.router.navigate(['/dashboard']);
+    }
+}
+```
+
+Reading route parameters
+
+```TYPESCRIPT
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+    ...
+})
+export class HomeComponent implements OnInit {
+    ...
+
+    constructor(private route: ActivatedRoute) { }
+
+    ngOnInit() {
+        this.route.params.subscribe(params => {
+            let id = params['id'];
+        });
+    }
+}
+```
+
+## <a name="services"></a>6. Services
 
 In Angular 2 a service is typically a class with a well defined purpose.
 
@@ -456,118 +568,6 @@ export class AppComponent {
   getData() {
     this.dataService.getPeople().subscribe((data: Person[])=> this.people = data)
   }
-}
-```
-
- ## <a name="routing"></a>6. Routing
-
-The Angular Router enables navigation from one view to the next as users perform application tasks.
-
-Routing is used to separate different parts of an application, generally by using the URL to denote the location
-
-Most routing applications should add a ```<base>``` element to the **index.html** as the first child in the ```<head>``` tag to tell the router how to compose navigation urls
-
-```HTML
-<base href="/">
-```
-
-A routed Angular app has one singleton **Router** service
-When the URL in the browser changes, the router looks for the correspinging **Route** from which it can find the componet to display
-
-Route definition
-
-```TYPESCRIPT
-import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { HomeComponent } from './home.component';
-import { PeopleComponent } from './people.component';
-import { PersonComponent } from './person.component';
-
-const appRoutes: Routes = [
-    {
-        path: '',
-        redirectTo: '/home',
-        pathMatch: 'full',
-    },
-    {
-        path: 'home',
-        component: HomeComponent
-    },
-    {
-        path: 'people',
-        component: PeopleComponent
-    },
-    {
-        path: 'person/:id',
-        component: PersonComponent
-    }
-];
-
-export const Routing: ModuleWithProviders = RouterModule.forRoot(appRoutes, { useHash: true });
-```
-
-Given the configuration, when the browser URL for this application becomes /home, the router matches that URL to the route path /home and displays the HomeComponent after a **RouterOutlet** that is placed in the host view's HTML.
-
-```HTML
-<router-outlet></router-outlet>
-```
-
-The navigation to a specific view can be done by typing the URL into the browser's address bar, or by using **router links**
-
-```HTML
-<h1>Angular Router</h1>
-  <nav>
-    <a [routerLink]="['/home']" [routerLinkActive]="['link-active']">Home</a>
-    <a [routerLink]="['/people']" [routerLinkActive]="['link-active']">People</a>
-    <a [routerLink]="['/person', {id: selectedPerson.id}]" [routerLinkActive]="['link-active']">Person</a>
-  </nav>
-  <router-outlet></router-outlet>
-```
-
-Navigation can also be done from typescript trough the **Router**
-
-```TYPESCRIPT
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
-@Component({
-    ...
-})
-export class HomeComponent {
-    ...
-
-     constructor(private router: Router) { }
-
-    goToPerson(id: number) {
-        this.router.navigate(['/person', id]);
-    }
-
-    goToDashboard() {
-        this.router.navigate(['/dashboard']);
-    }
-}
-```
-
-Reading route parameters
-
-```TYPESCRIPT
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
-@Component({
-    ...
-})
-export class HomeComponent implements OnInit {
-    ...
-
-    constructor(private route: ActivatedRoute) { }
-
-    ngOnInit() {
-        this.route.params.subscribe(params => {
-            let id = params['id'];
-        });
-    }
 }
 ```
 
