@@ -2,7 +2,7 @@
 
 Angular 2 is the next version of Google’s massively popular MV* framework for building complex applications in the browser (and beyond).
 
-Angular 2 comes with almost everything you need to build a complicated frontend web or mobile apps, from powerful templates to fast rendering, data management, HTTP services, form handling, and so much more.
+Angular 2 comes with almost everything you need to build a complex frontend web or mobile apps, from powerful templates to fast rendering, data management, HTTP services, form handling, and so much more.
 
 ## Angular basics
 
