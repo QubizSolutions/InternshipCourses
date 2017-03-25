@@ -301,8 +301,8 @@ Most routing applications should add a ```<base>``` element to the **index.html*
 <base href="/">
 ```
 
-A routed Angular app has one singleton **Router** service
-When the URL in the browser changes, the router looks for the correspinging **Route** from which it can find the componet to display
+A routed Angular app has one singleton **Router** service.
+When the URL in the browser changes, the router looks for the corresponding **Route** from which it can find the componet to display
 
 Route definition
 
