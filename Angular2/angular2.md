@@ -26,7 +26,7 @@ export class AppComponent { name = 'Angular'; }
 <my-app>Loading AppComponent content here ...</my-app>
  ```
 
- The template property defines a message inside an ```<h1>``` header. The message starts with **"Hello"** and ends with **{{name}}**, which is an Angular interpolation binding expression. At runtime, Angular replaces {{name}} with the value of the component's name property. Interpolation binding is one of many Angular features you'll discover in this course.
+ The template property defines a message inside an ```<h1>``` header. The message starts with **"Hello"** and ends with **{{name}}**, which is an Angular interpolation binding expression. At runtime, Angular replaces {{name}} with the value of the component's name property. Interpolation binding is one of Angular's many features you'll discover in this course.
 
  ## In this course we will cover:
 
