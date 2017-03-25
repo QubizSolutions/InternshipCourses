@@ -65,7 +65,7 @@ export class AppComponent { name = 'Angular'; }
 
 ***Angular modules consolidate components, directives and pipes into cohesive blocks of functionality... Modules can also add services***
 
-Angular applications are modular and every of them has at least one module class, which is called the **root module**(AppModule)
+Angular applications are modular and each has at least one module class, which is called the **root module**(AppModule)
 
 While the root module may be the only module in a small application, most apps have many more feature based modules as well
 
@@ -89,7 +89,7 @@ export class AppModule { }
 
 Every angular module is a class with a mandatory ```@NgModule``` decorator - **decorators** allow developers to configure classes as particular elements by setting metadata on them
 
-The most important propertises of the ```@NgModule``` decorator are:
+The most important properties of the ```@NgModule``` decorator are:
 * ```imports``` - specifies a list of modules whose exported directives/pipes should be available to templates in this module
 * ```exports``` - specifies a list of angular primitives that can be used within the template of any component that is part of an Angular module that imports this module
 * ```declarations``` - the view classes that belong to the module. Theese can only be **components**, **directives** and **pipes**
@@ -100,7 +100,7 @@ The most important propertises of the ```@NgModule``` decorator are:
 
 In Angular 2 any element of a web application can be a component.
 
-Components are the main of building elements and logic on the page. 
+Components are the main building blocks for building elements and logic on the page. 
 
 Component example: 
 
